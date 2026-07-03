@@ -1,6 +1,6 @@
 # Data Engineering — Core Concepts
 
-Personal study notes on core data engineering concepts, organized as a README for quick reference.
+Personal study notes on core data engineering concepts, organized  for quick reference.
 
 ## Table of contents
 
@@ -100,9 +100,4 @@ In practice, data scientists spend a large portion of their time in the bottom t
 
 These notes are based on foundational data engineering concepts and ideas aligned with "Fundamentals of Data Engineering" (Reis & Housley).
 
----
 
-If you'd like, I can:
-- Add a short example architecture diagram (ASCII or image link).
-- Create a higher-level README at the Phase 1 directory.
-- Split these notes into separate topic files (e.g., lifecycle.md, storage.md).
