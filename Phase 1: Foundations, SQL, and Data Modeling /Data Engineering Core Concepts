@@ -1,1 +1,76 @@
+Data Engineering Fundamentals — Study Notes
+Personal study notes on core data engineering concepts, covering the data engineering lifecycle, storage paradigms, and the skill set required of a data engineer.
+1. What Is Data Engineering?
+Data engineering is the development, implementation, and maintenance of systems and processes that take in raw data and produce high-quality, consistent information that supports downstream use cases — such as analysis and machine learning.
+Put another way: data engineering is the intersection of security, data management/DataOps, data architecture, orchestration, and software engineering.
+2. Why Data Engineering Is Complex
+•	Data engineering has to handle a lot of complex, moving parts, and must constantly optimize along several competing axes: 
+o	Cost
+o	Agility
+o	Scalability
+o	Simplicity
+o	Reuse
+o	Interoperability
+•	Modern tools considerably abstract and simplify workflows compared to earlier generations of data infrastructure.
+•	As a result, data engineers today focus less on building everything from scratch and more on balancing the simplest, most cost-effective, best-of-breed service that delivers value to the business.
+•	Data engineering is also expected to create agile data architecture — systems that can evolve as new trends and technologies emerge, rather than static, brittle pipelines.
 
+3. Data Maturity and Data Engineering
+•	Data maturity is the progression of an organization toward higher data utilization.
+•	As data maturity increases, the demands placed on the data engineering function (and its architecture) grow correspondingly.
+4. The Data Engineering Lifecycle
+The data engineering lifecycle describes how a data engineer manages the movement of data — from raw data in source systems to serving data for downstream use cases such as analytics or machine learning.
+Lifecycle stages:
+Generation → Ingestion → Transformation → Serving → Storage
+Storage underlies the entire lifecycle, not just one stage in it.
+Undercurrents (cross-cutting concerns)
+These run underneath every stage of the lifecycle:
+•	Security
+•	Data management (DataOps)
+•	Data architecture
+•	Orchestration
+•	Software engineering
+5. Storage Paradigms
+Concept	Description
+Data Warehouse	Structured data only (e.g. CSV, tabular formats)
+Data Lake	Stores raw data, structured and unstructured
+Lakehouse	Hybrid — combines structured and unstructured data (e.g. Snowflake, Databricks)
+Tools by Lifecycle Stage
+Stage	Example Tools
+Ingestion	Cloud Dataflow
+Transformation	Dataprep
+Serving	Analytics, ML/Learning, Reverse ETL
+Storage	Snowflake, Databricks
+
+6. Source Systems & Ingestion
+•	Ingestion tooling: commonly built with Python
+•	Ingestion patterns: 
+o	Batch — periodic, scheduled loads
+o	Streaming — continuous, real-time ingestion (e.g. Kafka)
+7. Transformation
+•	OLTP (Online Transaction Processing) — optimized for fast, transactional read/write (source systems)
+•	OLAP (Online Analytical Processing) — optimized for complex queries and analysis (warehouses)
+8. The Data Science Hierarchy of Needs
+This pyramid (based on Monica Rogati's "Data Science Hierarchy of Needs") splits responsibility between data engineering (bottom three levels) and data science (top two levels):
+              ▲
+             / \
+            / AI/ML \          ─┐
+           /---------\           ├─ Data Science
+          / Analytics  \        ─┘
+         /--------------\
+        / Aggregate/Label \    ─┐
+       /--------------------\    │
+      /  Store / Move / Process \ ├─ Data Engineering
+     /------------------------------\  │
+    /   Collect (instrument, log,  \  ─┘
+   /    sensors, external, user-     \
+  /     generated content)             \
+ /--------------------------------------\
+From the base up:
+1.	Collect — instrumentation, logging, sensors, external data, user-generated content (Data Engineering)
+2.	Store / Move / Process — reliable data flow and infrastructure (Data Engineering)
+3.	Aggregate / Label — cleaning, feature prep, exploratory data analysis (Data Engineering)
+4.	Analytics — metrics, A/B testing, reporting (Data Science)
+5.	AI / ML — the top of the pyramid (Data Science)
+Although many data scientists are eager to build and tune ML models, an estimated 70–80% of their time is actually spent in the bottom three layers — gathering, cleaning, and processing data — with only a small slice going to analysis and ML itself. Rogati's point: companies need to build a solid data foundation (i.e. invest in data engineering) before the top of the pyramid is worth pursuing.
+Notes based on foundational data engineering concepts, referencing ideas aligned with "Fundamentals of Data Engineering" (Reis & Housley).
