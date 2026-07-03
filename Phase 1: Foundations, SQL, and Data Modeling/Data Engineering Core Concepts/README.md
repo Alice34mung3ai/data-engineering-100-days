@@ -85,8 +85,8 @@ Example tools commonly used by lifecycle stage:
 - OLAP (Online Analytical Processing) — optimized for complex analytical queries (data warehouses).
 
 ## The Data Science Hierarchy of Needs
-
-Based on Monica Rogati's pyramid, responsibilities are commonly split between data engineering (bottom layers) and data science (top layers):
+▲
+Based on Monica Rogati's pyramid, responsibilities are commonly split between data engineering (1,2,3 ) and data science (4,5):
 
 1. Collect — instrumentation, logging, sensors, external data, and user-generated content (Data Engineering)
 2. Store / Move / Process — reliable data flow and infrastructure (Data Engineering)
